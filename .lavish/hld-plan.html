@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLD Plan - 12 Weeks</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/themes.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :where(.grid, .flex, .layout-grid, .layout-flex) > *,
+  :where([style*="display: grid"], [style*="display:grid"], [style*="display: flex"], [style*="display:flex"]) > * {
+    min-width: 0;
+  }
+  :where(p, h1, h2, h3, h4, h5, h6, li, dd, blockquote, figcaption, td, th, .badge, .label) {
+    overflow-wrap: anywhere;
+  }
+  :where(img, svg, video, canvas, iframe) {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body class="bg-base-100 text-base-content">
+<main class="mx-auto max-w-6xl p-6 lg:p-10 space-y-12">
+
+  <header class="hero bg-base-200 rounded-box">
+    <div class="hero-content text-center py-10 lg:py-14">
+      <div class="max-w-3xl space-y-5">
+        <span class="badge badge-accent badge-soft badge-lg">Track H - daily plan - diagram-first</span>
+        <h1 class="text-4xl lg:text-5xl font-bold">High-Level Design, one system per week</h1>
+        <p class="text-lg text-base-content/80">
+          October builds the vocabulary: scaling, estimation, caching, storage, queues. From there, one classic
+          system per week, each getting the same 7-part treatment: requirements, estimation, API, data model,
+          diagram, deep dives, trade-offs. One of three separate plans. Minimum 1 hour per day.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats stats-vertical sm:stats-horizontal shadow bg-base-200 w-full">
+    <div class="stat"><div class="stat-title">Systems</div><div class="stat-value text-accent">12</div><div class="stat-desc">designed end to end</div></div>
+    <div class="stat"><div class="stat-title">Treatment</div><div class="stat-value text-accent">7 parts</div><div class="stat-desc">same shape every time</div></div>
+    <div class="stat"><div class="stat-title">Mocks</div><div class="stat-value text-accent">3</div><div class="stat-desc">Nov + Dec</div></div>
+    <div class="stat"><div class="stat-title">Daily</div><div class="stat-value text-accent">60+</div><div class="stat-desc">minutes, more when it flows</div></div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">How every session runs</h2>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">5-10 min</span><h3 class="font-semibold">Recall</h3><p class="text-sm text-base-content/70">Rebuild yesterday's diagram of the current system from memory. Paper first, then compare against your notes.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">10 min</span><h3 class="font-semibold">Fundamental</h3><p class="text-sm text-base-content/70">One building block: what problem it solves, when it is the wrong tool, five bullets in <code class="kbd kbd-sm">hld/notes.md</code>.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">35-45 min</span><h3 class="font-semibold">Design work</h3><p class="text-sm text-base-content/70">One section of the 7-part treatment for the current system. Days 1-6: one section each. Day 7: redraw everything from memory.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">5 min</span><h3 class="font-semibold">Wrap</h3><p class="text-sm text-base-content/70">Update <code class="kbd kbd-sm">hld/progress.md</code>, write one trade-off sentence in the log.</p></div></div>
+    </div>
+    <div role="alert" class="alert alert-success alert-soft">
+      <span class="text-sm"><strong>Mastery gate (your rule):</strong> if a fundamental or a design section feels shaky, we stay on it with more examples and a from-memory redraw until it is cold. No moving on.</span>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The template you learn to draw in 10 minutes</h2>
+    <p class="text-base-content/70">Every system is a variation of this shape. You will draw it from memory until it is automatic, then adapt it per problem.</p>
+    <div class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="text-base-content/80 w-full">
+          <svg viewBox="0 0 940 300" role="img" aria-label="Generic architecture: clients through CDN and load balancer to API, with cache, database, queue and workers" width="100%">
+            <defs>
+              <marker id="hld-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g font-size="13" fill="currentColor" text-anchor="middle">
+              <g id="hld-clients">
+                <title>Clients</title>
+                <rect x="20" y="120" width="110" height="52" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="75" y="151">Clients</text>
+              </g>
+              <g id="hld-cdn">
+                <title>CDN</title>
+                <rect x="170" y="120" width="80" height="52" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="210" y="151">CDN</text>
+              </g>
+              <g id="hld-lb">
+                <title>Load balancer</title>
+                <rect x="290" y="120" width="90" height="52" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="335" y="151">LB</text>
+              </g>
+              <g id="hld-api">
+                <title>API service</title>
+                <rect x="420" y="120" width="150" height="52" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="495" y="151">API service</text>
+              </g>
+              <g id="hld-cache">
+                <title>Cache</title>
+                <rect x="610" y="40" width="140" height="48" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="680" y="69">Cache</text>
+              </g>
+              <g id="hld-db">
+                <title>Primary database</title>
+                <rect x="610" y="120" width="140" height="48" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="680" y="149">Database</text>
+              </g>
+              <g id="hld-queue">
+                <title>Queue</title>
+                <rect x="610" y="200" width="140" height="48" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="680" y="229">Queue</text>
+              </g>
+              <g id="hld-workers">
+                <title>Workers</title>
+                <rect x="800" y="200" width="120" height="48" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="860" y="229">Workers</text>
+              </g>
+              <line x1="130" y1="146" x2="162" y2="146" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="250" y1="146" x2="282" y2="146" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="380" y1="146" x2="412" y2="146" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="570" y1="132" x2="602" y2="78" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="570" y1="146" x2="602" y2="144" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="570" y1="160" x2="602" y2="214" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="750" y1="224" x2="792" y2="224" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#hld-arrow)"/>
+              <line x1="850" y1="200" x2="700" y2="172" stroke="currentColor" stroke-opacity="0.35" stroke-dasharray="5 4" marker-end="url(#hld-arrow)"/>
+            </g>
+          </svg>
+        </div>
+        <p class="text-xs text-base-content/60 mt-1">The dashed line is write-back from workers. Once this shape is reflex, every system is "which parts change?".</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The 7-part treatment</h2>
+    <div class="card card-border bg-base-200">
+      <div class="card-body">
+        <ol class="list-decimal list-inside text-sm space-y-1 text-base-content/80">
+          <li><strong>Requirements:</strong> functional and non-functional, and what is explicitly out of scope</li>
+          <li><strong>Estimation:</strong> back-of-envelope QPS, storage, bandwidth - before any component choices</li>
+          <li><strong>API design:</strong> the 3-5 endpoints that matter, with pagination and versioning</li>
+          <li><strong>Data model:</strong> entities, access patterns, SQL vs NoSQL justified by the pattern</li>
+          <li><strong>High-level diagram:</strong> clients, services, caches, queues, stores - drawn from the template</li>
+          <li><strong>Deep dive:</strong> the two hardest bottlenecks, in real numbers</li>
+          <li><strong>Trade-offs:</strong> failure modes, and what you would change at 10x scale</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The 12 weeks</h2>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-success badge-soft badge-sm">Phase 1</span><h3 class="card-title text-base">October: vocabulary + first system</h3></div>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li>Vertical vs horizontal scaling; latency vs throughput</li>
+            <li>Back-of-envelope estimation (QPS, storage, bandwidth)</li>
+            <li>Load balancing; CDN and DNS</li>
+            <li>Caching strategies, eviction, invalidation</li>
+            <li>SQL vs NoSQL; replication; sharding</li>
+            <li>CAP and consistency models; idempotency and retries</li>
+            <li>API design: REST, pagination, versioning</li>
+          </ul>
+          <p class="text-sm text-base-content/70">System 1: URL shortener, the October checkpoint, written end to end.</p>
+          <p class="text-xs text-base-content/60">Checkpoint: URL shortener fully written + diagram redrawn from memory</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-warning badge-soft badge-sm">Phase 2</span><h3 class="card-title text-base">November: building blocks + systems</h3></div>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li>Message queues (Kafka-style concepts); pub/sub</li>
+            <li>Event-driven design; saga for distributed transactions</li>
+            <li>Consistent hashing; distributed cache; rate limiting at scale</li>
+            <li>Search basics: inverted index; observability basics</li>
+          </ul>
+          <p class="text-sm text-base-content/70">Systems 2-6, one per week: chat, news feed, typeahead, distributed cache, rate limiter.</p>
+          <p class="text-xs text-base-content/60">Checkpoint: 4 systems written, HLD mock 1 done</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-error badge-soft badge-sm">Phase 3</span><h3 class="card-title text-base">December: hard systems + polish</h3></div>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li>Ride sharing: geo-indexing, matching, surge</li>
+            <li>Video streaming: upload pipeline, transcoding, delivery</li>
+            <li>Ticket booking: concurrency, locking, no overselling</li>
+            <li>Payments: idempotency, ledger, consistency</li>
+            <li>Notification service; web crawler</li>
+          </ul>
+          <p class="text-sm text-base-content/70">Systems 7-12, plus scaling deep dives and multi-region trade-offs on the earlier designs.</p>
+          <p class="text-xs text-base-content/60">Checkpoint: all 12 done, HLD mocks 2 and 3, deep-dive redraws from memory</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The real-world thread</h2>
+    <div class="grid gap-4 lg:grid-cols-2">
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Production note per system</h3><p class="text-sm text-base-content/70">Every system ends with three lines on how the big shops actually run it, and how the same concerns appear in the systems you work on: queues where you have seen timeouts, caches where you have seen staleness.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Weekly application task</h3><p class="text-sm text-base-content/70">Once a week: pick one concept and map it to your actual work. Where does your team cache? What would sharding your main table look like? Five lines in <code class="kbd kbd-sm">hld/notes.md</code>.</p></div></div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Adjust anything</h2>
+    <form class="card card-border bg-base-200" data-lavish-question="hld-notes"
+      onsubmit="event.preventDefault(); const v = this.querySelector('textarea').value.trim(); if (!v) return; queueAnswer(this, 'hld-notes', 'HLD plan notes: ' + v, { tag: 'text', text: v });">
+      <div class="card-body">
+        <textarea class="textarea textarea-bordered w-full" rows="3" placeholder="e.g. systems you care about most, topics to add or skip, anything to change in this plan"></textarea>
+        <div class="card-actions items-center justify-between mt-1">
+          <button type="submit" class="btn btn-accent btn-sm">Send notes</button>
+          <span data-status class="text-xs text-success"></span>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer class="card bg-base-200 card-border">
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">Next step</h2>
+      <p class="text-base-content/80 text-sm max-w-2xl">
+        Say "start" in chat (or annotate this page) and we begin with the fundamentals: scaling, then estimation,
+        then the URL shortener as the first full design. Minimum 1 hour, more when it flows.
+      </p>
+      <p class="text-xs text-base-content/50">Tip: highlight any text or click any element on this page to leave a note for me.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  function queueAnswer(form, question, message, opts) {
+    if (window.lavish && typeof window.lavish.queuePrompt === 'function') {
+      window.lavish.queuePrompt(message, Object.assign({ tag: 'choice', element: form, data: { question: question } }, opts || {}));
+    }
+    var s = form.querySelector('[data-status]');
+    if (s) s.textContent = 'Queued';
+  }
+</script>
+</body>
+</html>

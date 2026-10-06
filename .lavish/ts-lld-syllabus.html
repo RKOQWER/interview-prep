@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senior SWE Interview Program - LLD + HLD + DSA - 12 Weeks</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/themes.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :where(.grid, .flex, .layout-grid, .layout-flex) > *,
+  :where([style*="display: grid"], [style*="display:grid"], [style*="display: flex"], [style*="display:flex"]) > * {
+    min-width: 0;
+  }
+  :where(p, h1, h2, h3, h4, h5, h6, li, dd, blockquote, figcaption, td, th, .badge, .label) {
+    overflow-wrap: anywhere;
+  }
+  :where(img, svg, video, canvas, iframe) {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body class="bg-base-100 text-base-content">
+<main class="mx-auto max-w-6xl p-6 lg:p-10 space-y-12">
+
+  <header class="hero bg-base-200 rounded-box">
+    <div class="hero-content text-center py-10 lg:py-14">
+      <div class="max-w-3xl space-y-5">
+        <span class="badge badge-primary badge-soft badge-lg">Senior SWE program - LLD + HLD + DSA - October to December</span>
+        <h1 class="text-4xl lg:text-5xl font-bold">Three subjects. Twelve weeks. One daily block.</h1>
+        <p class="text-lg text-base-content/80">
+          Senior interviews test all three areas, so this program trains all three every day: pattern-based DSA in
+          Python, code-first Low-Level Design in TypeScript (with Python used to compare designs), and diagram-first
+          High-Level Design. Every concept ends with how it shows up in real production code, so the preparation
+          compounds at work too.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats stats-vertical sm:stats-horizontal shadow bg-base-200 w-full">
+    <div class="stat"><div class="stat-title">Weeks</div><div class="stat-value text-primary">12</div><div class="stat-desc">Oct 6 to end of Dec</div></div>
+    <div class="stat"><div class="stat-title">Tracks</div><div class="stat-value text-primary">3</div><div class="stat-desc">LLD - HLD - DSA daily</div></div>
+    <div class="stat"><div class="stat-title">DSA problems</div><div class="stat-value text-primary">100+</div><div class="stat-desc">by pattern, all reviewed</div></div>
+    <div class="stat"><div class="stat-title">LLD builds</div><div class="stat-value text-primary">14</div><div class="stat-desc">coded with tests</div></div>
+    <div class="stat"><div class="stat-title">HLD systems</div><div class="stat-value text-primary">12</div><div class="stat-desc">designed end to end</div></div>
+  </section>
+
+  <div role="alert" class="alert alert-warning alert-soft">
+    <span class="text-sm"><strong>What changed in this version:</strong> your interviews test LLD, HLD, and DSA together, at senior level, with three months to prepare. This program runs all three tracks in parallel with monthly milestones. The TypeScript LLD course you reviewed is now Track L below.</span>
+  </div>
+
+  <div role="alert" class="alert alert-info alert-soft">
+    <span class="text-sm"><strong>Deliberately out of scope:</strong> decorators and DI frameworks, advanced type gymnastics (conditional / mapped types), Node internals, Kubernetes operations depth, competitive programming edge cases. We learn exactly the depth interviews score: deliberate design decisions, stated trade-offs, working code.</span>
+  </div>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The daily triad</h2>
+    <p class="text-base-content/70">
+      One focused block per day, all three tracks inside it. 60 minutes minimum, 90 when the day allows, with
+      weekends for deeper builds. The design slot alternates LLD and HLD days; DSA runs every day.
+    </p>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">1</span><h3 class="font-semibold">Recall</h3><p class="text-sm text-base-content/70">5-10 min. Rebuild yesterday's pattern, system, or class design from memory, no notes.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">2</span><h3 class="font-semibold">DSA drill</h3><p class="text-sm text-base-content/70">25-40 min. Pattern lesson or refresh, then 1-2 problems. You attempt first, I review and we discuss complexity and alternatives.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">3</span><h3 class="font-semibold">Design block</h3><p class="text-sm text-base-content/70">25-40 min. Alternates days: LLD (write TypeScript with tests) and HLD (requirements, estimation, diagram, trade-offs).</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">4</span><h3 class="font-semibold">Wrap</h3><p class="text-sm text-base-content/70">5 min. Three-line log: what I learned, what is shaky, tomorrow's focus. Everything goes in your repo.</p></div></div>
+    </div>
+    <div role="alert" class="alert alert-success alert-soft">
+      <span class="text-sm"><strong>Mastery gate (your rule, locked in):</strong> if a concept feels even slightly shaky, we do not move on. I add more problems on that exact concept, in any track, until you can explain it and use it cold.</span>
+    </div>
+    <div role="alert" class="alert alert-info alert-soft">
+      <span class="text-sm"><strong>Weekends:</strong> one longer build (a full LLD problem coded to green tests, or a complete HLD walkthrough) plus one timed DSA set. This is where depth accumulates.</span>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The three tracks</h2>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-secondary badge-soft badge-lg font-mono">Track D</span><h3 class="card-title">Data Structures and Algorithms</h3></div>
+          <p class="text-sm text-base-content/70"><span class="font-semibold text-base-content">What senior rounds test:</span> pattern recognition under time pressure, complexity reasoning, clean code and clear thinking out loud.</p>
+          <p class="text-sm text-base-content/70"><span class="font-semibold text-base-content">How we train it:</span> pattern families instead of random problem roulette. 1-2 problems daily, one timed set weekly, every solution reviewed and logged in three lines: the signal, the complexity, the mistake to avoid. Working language: Python.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-primary badge-soft badge-lg font-mono">Track L</span><h3 class="card-title">Low-Level Design</h3></div>
+          <p class="text-sm text-base-content/70"><span class="font-semibold text-base-content">What senior rounds test:</span> turning requirements into classes with clear responsibilities, SOLID, patterns only where the requirement demands them, working TypeScript.</p>
+          <p class="text-sm text-base-content/70"><span class="font-semibold text-base-content">How we train it:</span> the module course below (M0-M7) plus 14 classic problems coded end to end with tests and interviewer twists. TypeScript is the primary language; the occasional Python port is used only to compare.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-accent badge-soft badge-lg font-mono">Track H</span><h3 class="card-title">High-Level Design</h3></div>
+          <p class="text-sm text-base-content/70"><span class="font-semibold text-base-content">What senior rounds test:</span> requirements and scope, back-of-envelope estimation, component architecture, deep dives, trade-offs and failure modes.</p>
+          <p class="text-sm text-base-content/70"><span class="font-semibold text-base-content">How we train it:</span> 12 classic systems, diagram-first, always ending with bottlenecks and trade-offs. We use Mermaid diagrams you can re-draw in an interview.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">12-week roadmap</h2>
+    <p class="text-base-content/70">Each month has a theme and a checkpoint. The checkpoints are mock interviews and completed builds, so progress is visible in your repo, not just "studied".</p>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead>
+          <tr><th>Month</th><th>DSA (daily)</th><th>LLD (design blocks)</th><th>HLD (design blocks)</th><th>Month-end checkpoint</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-success badge-soft badge-sm">October</span><div class="text-xs text-base-content/60 mt-1">weeks 1-4 - foundations</div></td>
+            <td class="text-sm">Big-O; arrays; strings; hashing; two pointers; sliding window; stacks and queues; binary search; linked lists; sorting</td>
+            <td class="text-sm">M0-M3: TS survival kit, OOP, SOLID</td>
+            <td class="text-sm">Scaling; estimation; load balancing; caching; SQL vs NoSQL; replication; sharding; CAP; API design</td>
+            <td class="text-sm">Parking Lot coded; TS mini-app done; URL shortener designed; 2 timed DSA sets; first DSA mock</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-warning badge-soft badge-sm">November</span><div class="text-xs text-base-content/60 mt-1">weeks 5-8 - patterns and systems</div></td>
+            <td class="text-sm">Trees; BST; heaps and top-k; recursion; backtracking; graphs (BFS/DFS); topological sort; union-find; greedy; intervals</td>
+            <td class="text-sm">M4-M5: design patterns + the problem-to-classes method; Tier 1-2 problems (Vending Machine, Library, Logger, Splitwise, Elevator, ATM, LRU Cache, Rate Limiter)</td>
+            <td class="text-sm">Queues and pub/sub; consistent hashing; sagas; rate limiting at scale; systems: chat, news feed, typeahead, distributed cache</td>
+            <td class="text-sm">2 LLD builds green; 2 HLD designs written; 1 LLD mock + 1 HLD mock + 1 DSA mock</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-error badge-soft badge-sm">December</span><div class="text-xs text-base-content/60 mt-1">weeks 9-12 - simulation and polish</div></td>
+            <td class="text-sm">DP 1D and 2D; knapsack; LCS; LIS; tries; bit manipulation; mixed timed sets; interview replays</td>
+            <td class="text-sm">M6-M7: Tier 3 problems (BookMyShow, Food Delivery, Pub/Sub, Chess) + interview craft</td>
+            <td class="text-sm">Ride sharing; video streaming; ticket booking; payments; notification service; scaling deep dives</td>
+            <td class="text-sm">Weekly full mock loop (DSA + LLD + HLD); weak-topic repair; final polish</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Track L - Low-Level Design (TypeScript)</h2>
+    <p class="text-base-content/70">Code-first, as you asked. M0-M3 run in October, patterns and Tier 1-2 problems in November, Tier 3 and interview craft in December. Every module is mostly you writing code.</p>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M0</span>
+          <h3 class="card-title">The workbench</h3>
+          <span class="badge badge-ghost badge-sm">1 session</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>Three folders, already created in <code class="kbd kbd-sm">interview-prep</code>: <code class="kbd kbd-sm">dsa/</code>, <code class="kbd kbd-sm">lld/</code>, <code class="kbd kbd-sm">hld/</code> - tracked completely separately</li>
+          <li><code class="kbd kbd-sm">lld/</code>: Node + TypeScript in strict mode + tsx to run files + vitest for tests. <code class="kbd kbd-sm">dsa/</code>: plain Python, runnable with python3. <code class="kbd kbd-sm">hld/</code>: design notes + Mermaid diagrams</li>
+          <li>Conventions: one class per file, interfaces separated from implementations, tests next to code (LLD); one file per pattern with your three-line notebook note (DSA)</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">You'll code:</span> the repo itself, then take a deliberately failing test and make it pass.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M1</span>
+          <h3 class="card-title">The TypeScript survival kit</h3>
+          <span class="badge badge-ghost badge-sm">7 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>Types, inference, function signatures, unions, literal types, recording behavior with types</li>
+          <li>Null safety: strict mode, optional chaining, nullish coalescing</li>
+          <li>Objects: interface vs type, optional and readonly properties, structural typing (the big mind-shift)</li>
+          <li>Classes deep dive: constructors, parameter properties, access modifiers, getters/setters, static, abstract vs interface</li>
+          <li>Generics, just enough: containers like <code class="kbd kbd-sm">Repository&lt;T&gt;</code>, constraints, and when NOT to genericize</li>
+          <li>Modules and file layout: imports, circular imports, enums vs literal unions</li>
+          <li>Errors: custom error classes, fail-fast design</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">You'll code:</span> a typed Task Manager mini-app, 10-12 small files, no design patterns yet.</p>
+        <p class="text-sm"><span class="text-primary font-semibold">The curated stdlib subset</span> is drilled across this module - see the list further down.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M2</span>
+          <h3 class="card-title">OOP that gets scored</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>Encapsulation means invariants, not getter/setter boilerplate</li>
+          <li>Abstraction: callers depend on the interface, not the implementation</li>
+          <li>Inheritance vs composition: the is-a / has-a test, and why composition is the default</li>
+          <li>Polymorphism: killing if/else chains on object type</li>
+          <li>Abstract class vs interface decision rule: shared state goes to an abstract class, everything else to an interface</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">Drills:</span> refactor a procedural script into objects; replace a type-switch with polymorphism.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M3</span>
+          <h3 class="card-title">SOLID in code</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>One principle at a time, always as violation - fix - your drill</li>
+          <li><strong>S</strong>: split classes by change driver, not by size</li>
+          <li><strong>O</strong>: add a new payment type without editing existing code</li>
+          <li><strong>L</strong>: repair a broken hierarchy (the Square/Rectangle trap)</li>
+          <li><strong>I</strong>: split fat interfaces (the throws-UnsupportedOperation test)</li>
+          <li><strong>D</strong>: inject interfaces instead of constructing dependencies, and why that makes tests trivial</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">Proof mechanic:</span> every fix must make a failing test pass and keep every other test green.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M4</span>
+          <h3 class="card-title">Pattern toolbox</h3>
+          <span class="badge badge-ghost badge-sm">5 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li><strong>Creational:</strong> Factory Method, Builder, Singleton vs registry (and why dependency injection usually beats Singleton)</li>
+          <li><strong>Behavioral:</strong> Strategy, State, Observer, Command, Template Method, Chain of Responsibility</li>
+          <li><strong>Structural:</strong> Adapter, Decorator, Facade, Proxy, Composite</li>
+          <li>Each pattern: the <em>signal in a requirement</em> that should trigger it, the skeleton, one mini build</li>
+          <li>Confusion pairs interviewers love: Strategy vs State, Decorator vs Proxy, Adapter vs Facade</li>
+          <li>Anti-pattern radar: God class, premature abstraction, pattern soup</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">You'll code:</span> a small build per pattern, then the same pattern applied inside a real problem.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M5</span>
+          <h3 class="card-title">The method: problem statement to classes</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <p class="text-sm text-base-content/80">Your stated weak spot, so it gets its own framework. The 8 steps:</p>
+        <ol class="list-decimal list-inside text-sm space-y-1 text-base-content/80">
+          <li>Clarify: functional requirements, constraints, what is out of scope</li>
+          <li>Underline nouns - candidate entities</li>
+          <li>Underline verbs - behaviors and responsibilities</li>
+          <li>Write invariants: what must always be true per entity</li>
+          <li>Find variation points - interfaces go here, and only here</li>
+          <li>Map relationships: has-a, is-a, uses-a</li>
+          <li>Trace 2-3 workflows end to end, happy path then edge cases</li>
+          <li>Name the public API before writing any implementation</li>
+        </ol>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">Format:</span> I model 2 problems end to end, thinking aloud. Then you co-drive one: you sketch, I review, we refine. Every design ends as interfaces + class shells, then code.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M6</span>
+          <h3 class="card-title">Problem lab - the core of the track</h3>
+          <span class="badge badge-ghost badge-sm">9-10 sessions</span>
+        </div>
+        <p class="text-sm text-base-content/80">
+          Each problem runs the same loop: interviewer-style prompt - you clarify - you sketch the skeleton -
+          we code it - tests - then the twist ("now add X"). Patterns are never the goal, they are the outcome.
+        </p>
+        <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+          <table class="table table-zebra">
+            <thead>
+              <tr><th>Tier</th><th>Problems</th><th>Patterns they pull in</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-success badge-soft badge-sm">Tier 1</span><div class="text-xs text-base-content/60 mt-1">foundations</div></td>
+                <td class="text-sm">Parking Lot, Vending Machine, Library Management, Logger, Tic-Tac-Toe</td>
+                <td class="text-sm">Strategy, State, Factory, Singleton vs registry, Observer</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-warning badge-soft badge-sm">Tier 2</span><div class="text-xs text-base-content/60 mt-1">richer rules</div></td>
+                <td class="text-sm">Splitwise, Elevator System, ATM, LRU Cache, Rate Limiter</td>
+                <td class="text-sm">State, Strategy, Chain of Responsibility, generics, data-structure reasoning</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-error badge-soft badge-sm">Tier 3</span><div class="text-xs text-base-content/60 mt-1">service style</div></td>
+                <td class="text-sm">Pub/Sub Notification Service, BookMyShow, Food Delivery, Chess</td>
+                <td class="text-sm">Observer, Command, Facade, order State machines, locking invariants</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M7</span>
+          <h3 class="card-title">Interview craft + full mocks</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>The 45-minute playbook: clarify 5, design 10, code 25, wrap 5</li>
+          <li>Trade-off sentences: "I chose X over Y because of this requirement. The cost is C, acceptable because D."</li>
+          <li>Talking while coding, naming things, handling the mid-interview twist without panicking</li>
+          <li>Full mock interviews where I play the interviewer and score you against the rubric</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Track L - the curated TypeScript subset</h2>
+    <p class="text-base-content/70">
+      You said you do not want to learn all the functions. Agreed. This is the whole list we drill. Each one is
+      introduced inside a real problem, never as a catalog memorization exercise. Where a function mirrors a Python
+      structure you already know (dict, set, list operations), we call out the equivalence so it sticks faster.
+    </p>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead>
+          <tr><th>Category</th><th>The functions we drill</th><th>Why they carry your code</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold text-sm">Arrays</td>
+            <td class="text-sm"><code class="kbd kbd-sm">map</code> <code class="kbd kbd-sm">filter</code> <code class="kbd kbd-sm">reduce</code> <code class="kbd kbd-sm">find</code> <code class="kbd kbd-sm">findIndex</code> <code class="kbd kbd-sm">some</code> <code class="kbd kbd-sm">every</code> <code class="kbd kbd-sm">flatMap</code> <code class="kbd kbd-sm">includes</code> <code class="kbd kbd-sm">sort</code> <code class="kbd kbd-sm">slice</code> <code class="kbd kbd-sm">spread</code></td>
+            <td class="text-sm">Turn collections inside out without mutable index loops. Also: the <code class="kbd kbd-sm">sort</code> mutation trap.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Map and Set</td>
+            <td class="text-sm"><code class="kbd kbd-sm">Map</code> for registries and caches, <code class="kbd kbd-sm">Set</code> for uniqueness and dedup, <code class="kbd kbd-sm">get/set/has/delete/values</code></td>
+            <td class="text-sm">The two data structures behind half of all LLD solutions and many DSA problems. Prefer Map over plain objects for lookups.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Objects</td>
+            <td class="text-sm"><code class="kbd kbd-sm">Object.keys</code> <code class="kbd kbd-sm">Object.values</code> <code class="kbd kbd-sm">Object.entries</code> <code class="kbd kbd-sm">Object.fromEntries</code> <code class="kbd kbd-sm">spread</code> <code class="kbd kbd-sm">Object.freeze</code></td>
+            <td class="text-sm">Configs, registries, safe copies, protecting invariants.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Strings</td>
+            <td class="text-sm"><code class="kbd kbd-sm">split</code> <code class="kbd kbd-sm">join</code> <code class="kbd kbd-sm">includes</code> <code class="kbd kbd-sm">startsWith</code> <code class="kbd kbd-sm">endsWith</code> <code class="kbd kbd-sm">replace</code> <code class="kbd kbd-sm">replaceAll</code> <code class="kbd kbd-sm">padStart</code> + template literals</td>
+            <td class="text-sm">Parsing commands, formatting receipts and log lines, many string DSA problems.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Control flow</td>
+            <td class="text-sm"><code class="kbd kbd-sm">for...of</code>, iteration order, when <code class="kbd kbd-sm">forEach</code> is wrong, when <code class="kbd kbd-sm">map</code> is wrong</td>
+            <td class="text-sm">Straight-line readable code instead of index bookkeeping.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-base-content/60">Everything else (regex deep-dives, currying, exotic array methods) is added only if a real problem demands it.</p>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Track D - Data Structures and Algorithms</h2>
+    <p class="text-base-content/70">
+      Every day, one pattern-focused block. We work by pattern families, not random problem roulette. Roughly 100
+      problems over 12 weeks, every one reviewed and logged in your repo (in the <code class="kbd kbd-sm">dsa/</code> folder).
+      If a pattern feels shaky, the mastery gate adds more problems on it before we move on. Working language:
+      Python, so daily practice is fast and matches your strongest language.
+    </p>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-success badge-soft badge-sm">Phase 1</span><h3 class="card-title text-base">Foundations (October)</h3></div>
+          <div class="flex flex-wrap gap-1">
+            <span class="badge badge-ghost badge-sm">Big-O</span><span class="badge badge-ghost badge-sm">arrays</span><span class="badge badge-ghost badge-sm">strings</span><span class="badge badge-ghost badge-sm">hashing</span><span class="badge badge-ghost badge-sm">two pointers</span><span class="badge badge-ghost badge-sm">sliding window</span><span class="badge badge-ghost badge-sm">prefix sums</span><span class="badge badge-ghost badge-sm">stacks</span><span class="badge badge-ghost badge-sm">queues</span><span class="badge badge-ghost badge-sm">binary search</span><span class="badge badge-ghost badge-sm">linked lists</span><span class="badge badge-ghost badge-sm">sorting</span>
+          </div>
+          <p class="text-sm text-base-content/70">One pattern intro plus 1-2 problems per day. Weekly 45-minute timed set with two unseen problems, scored like the real round.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-warning badge-soft badge-sm">Phase 2</span><h3 class="card-title text-base">Structures and graphs (November)</h3></div>
+          <div class="flex flex-wrap gap-1">
+            <span class="badge badge-ghost badge-sm">trees</span><span class="badge badge-ghost badge-sm">BST</span><span class="badge badge-ghost badge-sm">heaps</span><span class="badge badge-ghost badge-sm">top-k</span><span class="badge badge-ghost badge-sm">recursion</span><span class="badge badge-ghost badge-sm">backtracking</span><span class="badge badge-ghost badge-sm">BFS</span><span class="badge badge-ghost badge-sm">DFS</span><span class="badge badge-ghost badge-sm">topological sort</span><span class="badge badge-ghost badge-sm">union-find</span><span class="badge badge-ghost badge-sm">greedy</span><span class="badge badge-ghost badge-sm">intervals</span>
+          </div>
+          <p class="text-sm text-base-content/70">Graphs are the highest-yield senior topic, so they get the most reps in this phase. Mock DSA interview at month end.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-error badge-soft badge-sm">Phase 3</span><h3 class="card-title text-base">DP and simulation (December)</h3></div>
+          <div class="flex flex-wrap gap-1">
+            <span class="badge badge-ghost badge-sm">1D DP</span><span class="badge badge-ghost badge-sm">2D DP</span><span class="badge badge-ghost badge-sm">knapsack</span><span class="badge badge-ghost badge-sm">LCS</span><span class="badge badge-ghost badge-sm">LIS</span><span class="badge badge-ghost badge-sm">tries</span><span class="badge badge-ghost badge-sm">bit manipulation</span><span class="badge badge-ghost badge-sm">mixed timed sets</span>
+          </div>
+          <p class="text-sm text-base-content/70">DP is learned by pattern families (take / skip, knapsack shapes, two-sequence shapes). Every week ends with a mixed timed set.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card card-border bg-base-200">
+      <div class="card-body">
+        <h3 class="card-title text-base">How the DSA track runs</h3>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li><strong>Daily:</strong> 25-40 min - pattern lesson or refresh, then 1-2 problems. You attempt first, I review, we discuss complexity and alternatives</li>
+          <li><strong>Language:</strong> Python - idiomatic and fast. When a structure has a direct TypeScript twin (Map, Set, heaps), we note it once so your LLD fluency grows for free</li>
+          <li><strong>Notebook:</strong> after every problem, three lines in your repo - the signal, the complexity, the mistake to avoid</li>
+          <li><strong>Weekly:</strong> one 45-minute timed set, done cold, scored, and reviewed</li>
+          <li><strong>Mastery gate:</strong> a shaky pattern earns 3 extra problems on that pattern before we start the next one</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Track H - High-Level Design</h2>
+    <p class="text-base-content/70">
+      Diagram-first. Every system gets the same 7-part treatment, and every design ends with bottlenecks,
+      trade-offs, and failure modes, which is exactly what senior rounds score. We generate Mermaid diagrams, and
+      you learn to reproduce them on a whiteboard in under 10 minutes.
+    </p>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-success badge-soft badge-sm">Phase 1</span><h3 class="card-title text-base">Fundamentals (October)</h3></div>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li>Vertical vs horizontal scaling; latency vs throughput</li>
+            <li>Back-of-envelope estimation (QPS, storage, bandwidth)</li>
+            <li>Load balancing; CDN and DNS</li>
+            <li>Caching strategies and eviction; cache invalidation</li>
+            <li>SQL vs NoSQL; replication; sharding and partitioning</li>
+            <li>CAP and consistency models; idempotency and retries</li>
+            <li>API design: REST, pagination, versioning</li>
+          </ul>
+          <p class="text-sm text-base-content/70">First full design: URL shortener, as the October checkpoint.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-warning badge-soft badge-sm">Phase 2</span><h3 class="card-title text-base">Building blocks and first systems (November)</h3></div>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li>Message queues (Kafka-style concepts); pub/sub</li>
+            <li>Event-driven design; saga pattern for distributed transactions</li>
+            <li>Consistent hashing; distributed cache; rate limiting at scale</li>
+            <li>Search basics: inverted index</li>
+            <li>Observability basics: logs, metrics, tracing</li>
+          </ul>
+          <p class="text-sm text-base-content/70">Systems: chat, news feed, typeahead, distributed cache.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-error badge-soft badge-sm">Phase 3</span><h3 class="card-title text-base">Advanced systems (December)</h3></div>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li>Ride sharing: geo-indexing, matching, surge</li>
+            <li>Video streaming: upload pipeline, transcoding, CDN delivery</li>
+            <li>Ticket booking: concurrency, locking, overselling prevention</li>
+            <li>Payments: idempotency, ledger, consistency</li>
+            <li>Notification service; rate limiter</li>
+          </ul>
+          <p class="text-sm text-base-content/70">Systems: ride sharing, video streaming, ticket booking, payments, notification service, web crawler.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card card-border bg-base-200">
+      <div class="card-body">
+        <h3 class="card-title text-base">The 7-part treatment for every system</h3>
+        <ol class="list-decimal list-inside text-sm space-y-1 text-base-content/80">
+          <li>Functional and non-functional requirements, and what is explicitly out of scope</li>
+          <li>Back-of-envelope estimation (QPS, storage, bandwidth)</li>
+          <li>API design</li>
+          <li>Data model and storage choices</li>
+          <li>High-level diagram (Mermaid: clients, services, queues, caches, stores)</li>
+          <li>Deep dive on the two hardest bottlenecks</li>
+          <li>Trade-offs, failure modes, and what you would change at 10x scale</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The real-world thread</h2>
+    <p class="text-base-content/70">
+      You asked to apply all of this at work, not just pass interviews. Every track has a thread that connects
+      concepts back to your actual codebase.
+    </p>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Production note per session</h3><p class="text-sm text-base-content/70">Two minutes at the end of each session: where this concept lives in production. Strategy in a pricing service, State in order workflows, sharding in a database you have used, caching where you have seen it fail.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Weekly application task</h3><p class="text-sm text-base-content/70">Once a week, pick one concept and apply or refactor something in your real work repo. Five lines in the notes folder: what changed, why it is better, what the trade-off was.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Trade-off log</h3><p class="text-sm text-base-content/70">Every design decision gets one sentence: chose X over Y because of requirement Z; the cost is C, acceptable because D. That exact sentence shape works in interviews and in PR discussions.</p></div></div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">A taste of the teaching style (Track L)</h2>
+    <p class="text-base-content/70">Every lesson is a smell, then a fix. Here is the exact move you will learn in M3 and reuse in the Parking Lot problem.</p>
+    <p class="text-sm text-primary font-semibold">Before: if/else on type - a hidden open/closed violation. Every new vehicle type edits this class.</p>
+    <div id="code-before"></div>
+    <p class="text-sm text-success font-semibold mt-4">After: one interface, one class per rate. New type = new class, zero edits here.</p>
+    <div id="code-after"></div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Decisions and calibration</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">Window</span><p class="text-sm">October to December - 12 weeks, steady daily rhythm</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">Languages</span><p class="text-sm">DSA: Python. LLD: TypeScript first, Python to compare. HLD: language-agnostic. TS concepts get Python analogies</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">Daily shape</span><p class="text-sm">One block per day, all three tracks inside it</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">Mastery gate</span><p class="text-sm">Unclear concept = extra problems on it until you can explain and use it cold</p></div></div>
+    </div>
+
+    <div class="grid gap-4 lg:grid-cols-2">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title text-base">Language decisions (locked in)</h3>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li><strong>DSA:</strong> Python - fastest to write, matches your strongest language</li>
+            <li><strong>LLD:</strong> TypeScript first; Python only to cross-check how a design reads in your everyday language</li>
+            <li><strong>HLD:</strong> language-agnostic - diagrams, estimates, trade-offs</li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="card card-border bg-base-200" data-lavish-question="daily-budget"
+        onsubmit="event.preventDefault(); const v = new FormData(this).get('daily-budget'); if (!v) return; queueAnswer(this, 'daily-budget', 'Calibration - daily time budget: ' + v + '.', { text: 'Daily budget: ' + v });">
+        <div class="card-body">
+          <h3 class="card-title text-base">Daily time budget for the triad?</h3>
+          <label class="label cursor-pointer justify-start gap-3"><input type="radio" name="daily-budget" value="60 minutes - tight triad (5 / 25 / 25 / 5)" class="radio radio-primary radio-sm"><span class="text-sm">60 minutes - tight triad (5 / 25 / 25 / 5)</span></label>
+          <label class="label cursor-pointer justify-start gap-3"><input type="radio" name="daily-budget" value="90 minutes - relaxed triad (10 / 35 / 40 / 5)" class="radio radio-primary radio-sm"><span class="text-sm">90 minutes - relaxed triad (10 / 35 / 40 / 5) <span class="text-primary text-xs">(more depth per day)</span></span></label>
+          <div class="card-actions items-center justify-between mt-1">
+            <button type="submit" class="btn btn-primary btn-sm">Send this answer</button>
+            <span data-status class="text-xs text-success"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <form class="card card-border bg-base-200" data-lavish-question="notes"
+      onsubmit="event.preventDefault(); const v = this.querySelector('textarea').value.trim(); if (!v) return; queueAnswer(this, 'notes', 'Calibration notes from program review: ' + v, { tag: 'text', text: v });">
+      <div class="card-body">
+        <h3 class="card-title text-base">Anything else to change? (optional)</h3>
+        <textarea class="textarea textarea-bordered w-full" rows="3" placeholder="e.g. interview dates, target companies, topics you dread, systems or problems you want added or skipped"></textarea>
+        <div class="card-actions items-center justify-between mt-1">
+          <button type="submit" class="btn btn-primary btn-sm">Send notes</button>
+          <span data-status class="text-xs text-success"></span>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer class="card bg-base-200 card-border">
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">Next step</h2>
+      <p class="text-base-content/80 text-sm max-w-2xl">
+        The three folders and language decisions are locked in. One question left above (daily budget), or just say "start" in chat.
+        Session 1 covers all three tracks: folder check (M0), your first DSA pattern in Python, and the first HLD fundamentals block.
+      </p>
+      <p class="text-xs text-base-content/50">Tip: highlight any text or click any element on this page to leave a note for me.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  function queueAnswer(form, question, message, opts) {
+    if (window.lavish && typeof window.lavish.queuePrompt === 'function') {
+      window.lavish.queuePrompt(message, Object.assign({ tag: 'choice', element: form, data: { question: question } }, opts || {}));
+    }
+    var s = form.querySelector('[data-status]');
+    if (s) s.textContent = 'Queued';
+  }
+</script>
+<script type="module">
+  import { File, FileDiff } from "https://esm.sh/@pierre/diffs@1.2.10?bundle";
+
+  const options = { theme: { light: "github-light", dark: "github-dark" }, themeType: "dark", overflow: "wrap", diffStyle: "split" };
+
+  const before = {
+    name: "fee-calculator.ts",
+    contents: [
+      "class FeeCalculator {",
+      "  calculate(type: string, hours: number): number {",
+      "    if (type === 'car') return hours * 20;",
+      "    if (type === 'bike') return hours * 10;",
+      "    if (type === 'truck') return hours * 40;",
+      "    throw new Error('Unknown vehicle type');",
+      "  }",
+      "}",
+      ""
+    ].join("\n"),
+  };
+  const after = {
+    name: "fee-calculator.ts",
+    contents: [
+      "interface FeeStrategy {",
+      "  calculate(hours: number): number;",
+      "}",
+      "",
+      "class FeeCalculator {",
+      "  private strategies = new Map<string, FeeStrategy>();",
+      "",
+      "  register(type: string, strategy: FeeStrategy): void {",
+      "    this.strategies.set(type, strategy);",
+      "  }",
+      "",
+      "  calculate(type: string, hours: number): number {",
+      "    const strategy = this.strategies.get(type);",
+      "    if (!strategy) throw new Error('Unknown vehicle type');",
+      "    return strategy.calculate(hours);",
+      "  }",
+      "}",
+      ""
+    ].join("\n"),
+  };
+
+  new File(options).render({ containerWrapper: document.querySelector("#code-before"), file: before });
+  new FileDiff({ ...options, diffStyle: "unified" }).render({ containerWrapper: document.querySelector("#code-after"), oldFile: before, newFile: after });
+</script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSA Pattern Plan - 12 Weeks - Python</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/themes.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :where(.grid, .flex, .layout-grid, .layout-flex) > *,
+  :where([style*="display: grid"], [style*="display:grid"], [style*="display: flex"], [style*="display:flex"]) > * {
+    min-width: 0;
+  }
+  :where(p, h1, h2, h3, h4, h5, h6, li, dd, blockquote, figcaption, td, th, .badge, .label) {
+    overflow-wrap: anywhere;
+  }
+  :where(img, svg, video, canvas, iframe) {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body class="bg-base-100 text-base-content">
+<main class="mx-auto max-w-6xl p-6 lg:p-10 space-y-12">
+
+  <header class="hero bg-base-200 rounded-box">
+    <div class="hero-content text-center py-10 lg:py-14">
+      <div class="max-w-3xl space-y-5">
+        <span class="badge badge-secondary badge-soft badge-lg">Track D - daily plan - Python</span>
+        <h1 class="text-4xl lg:text-5xl font-bold">Close the pattern gap</h1>
+        <p class="text-lg text-base-content/80">
+          You know the concepts but freeze on new mediums and hards. That is not a coding problem, it is a
+          selection problem: nothing maps the statement to a pattern yet. This plan trains that mapping directly,
+          with cold mixed problems, recognition drills, and an error log. One of three separate plans. Minimum
+          1 hour per day, more when it flows.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats stats-vertical sm:stats-horizontal shadow bg-base-200 w-full">
+    <div class="stat"><div class="stat-title">Weeks</div><div class="stat-value text-secondary">12</div><div class="stat-desc">Oct to Dec</div></div>
+    <div class="stat"><div class="stat-title">Problems</div><div class="stat-value text-secondary">~105</div><div class="stat-desc">mostly cold mediums</div></div>
+    <div class="stat"><div class="stat-title">Recognition drills</div><div class="stat-value text-secondary">2/wk</div><div class="stat-desc">no code, patterns only</div></div>
+    <div class="stat"><div class="stat-title">Timed sets</div><div class="stat-value text-secondary">1/wk</div><div class="stat-desc">2 problems, 90 min</div></div>
+    <div class="stat"><div class="stat-title">Mocks</div><div class="stat-value text-secondary">3</div><div class="stat-desc">rubric-scored</div></div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The real diagnosis</h2>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">1. Patterns as topics, not signals</h3><p class="text-sm text-base-content/70">You can implement BFS. But when a fresh problem arrives, nothing in your head maps the statement to BFS. That mapping is a separate, trainable skill - and it was never the thing you practiced.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">2. Blocked practice hid it</h3><p class="text-sm text-base-content/70">Twenty sliding-window problems in a row trains execution, not recognition: the block already tells you the pattern. Real interviews never label the pattern. So from day one, most of your practice here is mixed.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">3. No post-mortem</h3><p class="text-sm text-base-content/70">An attempt without a written takeaway repeats forever. Every miss goes in the error log with a mistake class and a scheduled redo.</p></div></div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The 60-second scan</h2>
+    <p class="text-base-content/70">Before every problem, and never skipping a step. We rehearse this until it is automatic.</p>
+    <div class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="text-base-content/80 w-full">
+          <svg viewBox="0 0 940 130" role="img" aria-label="Scan flow: constraints, keywords, top two candidates, then code" width="100%">
+            <defs>
+              <marker id="scan-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g font-size="14" fill="currentColor" text-anchor="middle">
+              <g id="scan-step-1">
+                <title>Step 1: read the constraints</title>
+                <rect x="10" y="30" width="205" height="70" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="112" y="60">1. Constraints</text>
+                <text x="112" y="81" font-size="12" fill-opacity="0.7">n = ? sets the complexity budget</text>
+              </g>
+              <g id="scan-step-2">
+                <title>Step 2: read the keywords</title>
+                <rect x="255" y="30" width="205" height="70" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="357" y="60">2. Keywords</text>
+                <text x="357" y="81" font-size="12" fill-opacity="0.7">the ask, read verbatim</text>
+              </g>
+              <g id="scan-step-3">
+                <title>Step 3: name top two candidates</title>
+                <rect x="500" y="30" width="205" height="70" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="602" y="60">3. Top-2 candidates</text>
+                <text x="602" y="81" font-size="12" fill-opacity="0.7">plus a one-line reason each</text>
+              </g>
+              <g id="scan-step-4">
+                <title>Step 4: then code</title>
+                <rect x="745" y="30" width="185" height="70" rx="12" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
+                <text x="837" y="60">4. Now code</text>
+                <text x="837" y="81" font-size="12" fill-opacity="0.7">never before this point</text>
+              </g>
+              <line x1="215" y1="65" x2="247" y2="65" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#scan-arrow)"/>
+              <line x1="460" y1="65" x2="492" y2="65" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#scan-arrow)"/>
+              <line x1="705" y1="65" x2="737" y2="65" stroke="currentColor" stroke-opacity="0.6" marker-end="url(#scan-arrow)"/>
+            </g>
+          </svg>
+        </div>
+        <ol class="list-decimal list-inside text-sm space-y-1 text-base-content/80 mt-2">
+          <li><strong>Constraints first:</strong> the n bound tells you the allowed complexity before anything else (table below)</li>
+          <li><strong>Input shape:</strong> sorted? graph? tree? matrix? string? each shape has default tools</li>
+          <li><strong>Output shape:</strong> "count ways" points at DP, "min/max" at DP or greedy, "feasible?" at greedy or binary search on answer, "pair/index" at hash or two pointers</li>
+          <li><strong>Keywords:</strong> the statement's exact words are a lookup table (below)</li>
+          <li><strong>Commit:</strong> write your top-2 candidates with reasons, then pick one and code. Skipping this step is how you end up 30 minutes into the wrong approach</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Signal to pattern (the core table)</h2>
+    <p class="text-base-content/70">Memorize the left column. The rest becomes reflex through the drills.</p>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead>
+          <tr><th>Signal you see</th><th>First pattern to reach for</th><th>Classic example</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="text-sm"><code class="kbd kbd-sm">n &lt;= 20</code></td><td class="text-sm">Exponential allowed: backtracking, bitmask</td><td class="text-sm">Subsets, N-Queens</td></tr>
+          <tr><td class="text-sm"><code class="kbd kbd-sm">n &lt;= 2000</code></td><td class="text-sm">O(n²) budget: nested loops, interval DP</td><td class="text-sm">Burst Balloons</td></tr>
+          <tr><td class="text-sm"><code class="kbd kbd-sm">n &lt;= 10^5</code>, unsorted</td><td class="text-sm">O(n log n): sort, heap, binary search, pointers</td><td class="text-sm">Kth Largest Element</td></tr>
+          <tr><td class="text-sm"><code class="kbd kbd-sm">n &gt;= 10^9</code></td><td class="text-sm">O(log n): binary search on answer, math</td><td class="text-sm">Koko Eating Bananas</td></tr>
+          <tr><td class="text-sm">"contiguous subarray / substring"</td><td class="text-sm">Sliding window, prefix sums</td><td class="text-sm">Longest Substring, Subarray Sum Equals K</td></tr>
+          <tr><td class="text-sm">"top k / kth largest"</td><td class="text-sm">Heap, quickselect</td><td class="text-sm">Top K Frequent Elements</td></tr>
+          <tr><td class="text-sm">"number of ways / count combinations"</td><td class="text-sm">DP: take-skip, knapsack shapes</td><td class="text-sm">Coin Change II, Decode Ways</td></tr>
+          <tr><td class="text-sm">"all combinations / permutations / valid boards"</td><td class="text-sm">Backtracking</td><td class="text-sm">Permutations, N-Queens</td></tr>
+          <tr><td class="text-sm">"shortest path, unweighted / fewest steps"</td><td class="text-sm">BFS</td><td class="text-sm">Word Ladder, Rotting Oranges</td></tr>
+          <tr><td class="text-sm">"prerequisites / ordering / build order"</td><td class="text-sm">Topological sort</td><td class="text-sm">Course Schedule II</td></tr>
+          <tr><td class="text-sm">"connected / same group / merge accounts"</td><td class="text-sm">Union-find or DFS</td><td class="text-sm">Number of Islands, Accounts Merge</td></tr>
+          <tr><td class="text-sm">"next greater / next smaller / span"</td><td class="text-sm">Monotonic stack</td><td class="text-sm">Daily Temperatures</td></tr>
+          <tr><td class="text-sm">"intervals / overlap / merge ranges"</td><td class="text-sm">Sort by start + sweep</td><td class="text-sm">Merge Intervals, Meeting Rooms II</td></tr>
+          <tr><td class="text-sm">"two strings / edit / common subsequence"</td><td class="text-sm">2D DP</td><td class="text-sm">Edit Distance, LCS</td></tr>
+          <tr><td class="text-sm">"sorted or rotated sorted array + search"</td><td class="text-sm">Binary search variants</td><td class="text-sm">Search in Rotated Array</td></tr>
+          <tr><td class="text-sm">"linked list cycle / kth from end"</td><td class="text-sm">Fast and slow pointers</td><td class="text-sm">Linked List Cycle II</td></tr>
+          <tr><td class="text-sm">"level by level / tree depth"</td><td class="text-sm">BFS with queue / DFS recursion</td><td class="text-sm">Binary Tree Level Order</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-base-content/60">If two candidates fit, prefer the one with the simpler invariant and name why. The scan is about committing with reasons, not guessing.</p>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The daily loop (60-90 min)</h2>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-secondary badge-sm">5 min</span><h3 class="font-semibold">Recall</h3><p class="text-sm text-base-content/70">Yesterday's signal rows from memory, plus one pattern skeleton rebuilt from scratch.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-secondary badge-sm">30 min</span><h3 class="font-semibold">Cold problem</h3><p class="text-sm text-base-content/70">One medium, full scan ritual first. Hard limit: 20 minutes without a hint, one hint maximum.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-secondary badge-sm">15 min</span><h3 class="font-semibold">Finish or study</h3><p class="text-sm text-base-content/70">Finish with the hint, or compare against the editorial. Extract the reusable skeleton.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-secondary badge-sm">10 min</span><h3 class="font-semibold">Post-mortem</h3><p class="text-sm text-base-content/70">Log it: mistake class, the signal you missed, redo date. Clear any due redos first.</p></div></div>
+    </div>
+    <div role="alert" class="alert alert-success alert-soft">
+      <span class="text-sm"><strong>Mastery gate (your rule):</strong> a wrong-pattern mistake (class A) triggers 3 extra problems on the correct pattern this week, before anything new. A shaky pattern is never left behind.</span>
+    </div>
+    <p class="text-sm text-base-content/60">Hard problems enter in December, with a few late November. Until then mediums are the target: they are the interview core, and they are where your selection skill is weakest.</p>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Weekly rhythm</h2>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead><tr><th>When</th><th>What</th></tr></thead>
+        <tbody>
+          <tr><td class="text-sm font-semibold">Mon-Fri</td><td class="text-sm">One cold medium per day, full daily loop. 60 minutes minimum, more when it flows.</td></tr>
+          <tr><td class="text-sm font-semibold">Tue + Thu, first 10 min</td><td class="text-sm">Recognition drill: 8-10 statements, name top-2 patterns with reasons, zero code.</td></tr>
+          <tr><td class="text-sm font-semibold">Saturday</td><td class="text-sm">Consolidation: rebuild 3 skeletons from memory, clear due redos, review the error log for repeated classes.</td></tr>
+          <tr><td class="text-sm font-semibold">Sunday</td><td class="text-sm">Timed set: 2 problems, 90 minutes, cold, then a full post-mortem and a score.</td></tr>
+          <tr><td class="text-sm font-semibold">Every 2 weeks from week 4</td><td class="text-sm">Mock interview: 45 minutes, 2 problems, you talk out loud, I play the interviewer and score you.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Recognition drills (the actual fix)</h2>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Route or Solve</h3><p class="text-sm text-base-content/70">I give you 8-10 problem statements or titles. You name the top-2 candidate patterns and one reason for each. No code, 10 minutes. Score: first-choice correct.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Constraint math</h3><p class="text-sm text-base-content/70">10 rows of n bounds, you write the allowed complexity for each in 2 minutes, then we check against the table. This makes step 1 of the scan instant.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Blind roulette</h3><p class="text-sm text-base-content/70">Mixed problems from patterns you already covered, no hints about the topic. You commit to a pattern out loud before coding; a wrong call still gets solved with the right one, then logged.</p></div></div>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-3">
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-secondary badge-sm">By end of October</span><p class="text-sm">First-choice hit rate on mediums: 50%+</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-warning badge-sm">By end of November</span><p class="text-sm">First-choice hit rate on mediums: 65%+</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-error badge-sm">By end of December</span><p class="text-sm">First-choice hit rate on mediums: 80%+, and hards no longer freeze you</p></div></div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Mistake taxonomy (what the error log measures)</h2>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead><tr><th>Class</th><th>What happened</th><th>Scheduled fix</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge badge-error badge-soft badge-sm">A</span></td><td class="text-sm">Wrong pattern chosen</td><td class="text-sm">3 extra problems on the right pattern this week + recognition drill focus</td></tr>
+          <tr><td><span class="badge badge-warning badge-soft badge-sm">B</span></td><td class="text-sm">Right pattern, wrong details</td><td class="text-sm">Re-derive the skeleton from memory, redo same problem in 7 days</td></tr>
+          <tr><td><span class="badge badge-warning badge-soft badge-sm">C</span></td><td class="text-sm">Missed edge case</td><td class="text-sm">Add to the edge-case checklist (empty, single, duplicates, bounds, overflow), redo in 7 days</td></tr>
+          <tr><td><span class="badge badge-info badge-soft badge-sm">D</span></td><td class="text-sm">Complexity misjudged</td><td class="text-sm">Estimate complexity before coding for the next 5 problems, constraint drill</td></tr>
+          <tr><td><span class="badge badge-info badge-soft badge-sm">E</span></td><td class="text-sm">Implementation bug</td><td class="text-sm">Debug max 5 minutes, then restart clean; note the bug pattern; redo in 7 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The 12 weeks</h2>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-success badge-soft badge-sm">Phase 1</span><h3 class="card-title text-base">October: rebuild as signals</h3></div>
+          <div class="flex flex-wrap gap-1">
+            <span class="badge badge-ghost badge-sm">arrays</span><span class="badge badge-ghost badge-sm">strings</span><span class="badge badge-ghost badge-sm">hashing</span><span class="badge badge-ghost badge-sm">two pointers</span><span class="badge badge-ghost badge-sm">sliding window</span><span class="badge badge-ghost badge-sm">prefix sums</span><span class="badge badge-ghost badge-sm">binary search</span><span class="badge badge-ghost badge-sm">stacks</span><span class="badge badge-ghost badge-sm">monotonic stack</span><span class="badge badge-ghost badge-sm">queues</span><span class="badge badge-ghost badge-sm">linked lists</span><span class="badge badge-ghost badge-sm">sorting</span>
+          </div>
+          <p class="text-sm text-base-content/70">~30 problems. Baseline first: 3 cold mediums in session 1 to measure your starting hit rate, then we track it upward.</p>
+          <p class="text-xs text-base-content/60">Checkpoint: baseline set, first timed set done, hit rate 50%+</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-warning badge-soft badge-sm">Phase 2</span><h3 class="card-title text-base">November: structures and graphs</h3></div>
+          <div class="flex flex-wrap gap-1">
+            <span class="badge badge-ghost badge-sm">trees</span><span class="badge badge-ghost badge-sm">BST</span><span class="badge badge-ghost badge-sm">heaps</span><span class="badge badge-ghost badge-sm">top-k</span><span class="badge badge-ghost badge-sm">recursion</span><span class="badge badge-ghost badge-sm">backtracking</span><span class="badge badge-ghost badge-sm">BFS</span><span class="badge badge-ghost badge-sm">DFS</span><span class="badge badge-ghost badge-sm">topological sort</span><span class="badge badge-ghost badge-sm">union-find</span><span class="badge badge-ghost badge-sm">greedy</span><span class="badge badge-ghost badge-sm">intervals</span>
+          </div>
+          <p class="text-sm text-base-content/70">~40 problems, first hards near the end. Blind roulette turns on in week 6: mixed problems, no topic labels.</p>
+          <p class="text-xs text-base-content/60">Checkpoint: hit rate 65%+, first hard solved cold, mock 1 done</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <div class="flex flex-wrap items-center gap-2"><span class="badge badge-error badge-soft badge-sm">Phase 3</span><h3 class="card-title text-base">December: DP and simulation</h3></div>
+          <div class="flex flex-wrap gap-1">
+            <span class="badge badge-ghost badge-sm">1D DP</span><span class="badge badge-ghost badge-sm">2D DP</span><span class="badge badge-ghost badge-sm">knapsack</span><span class="badge badge-ghost badge-sm">LCS</span><span class="badge badge-ghost badge-sm">LIS</span><span class="badge badge-ghost badge-sm">grid DP</span><span class="badge badge-ghost badge-sm">tries</span><span class="badge badge-ghost badge-sm">bit manipulation</span>
+          </div>
+          <p class="text-sm text-base-content/70">~35 problems, timed sets become full simulations. DP is learned as three families: take-skip, knapsack, two-sequence.</p>
+          <p class="text-xs text-base-content/60">Checkpoint: hit rate 80%+ on mediums, 2 more mocks, weak-pattern sweep done</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Tracking (inside <code class="kbd kbd-sm">dsa/</code>)</h2>
+    <div class="grid gap-4 lg:grid-cols-2">
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">dsa/progress.md</h3><p class="text-sm text-base-content/70">A weekly checklist: problems solved, drill hit rate, timed set score, redos due. We update it after every session so you can see the curve, not just feel it.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">dsa/error-log.md</h3><p class="text-sm text-base-content/70">One entry per problem, kept short. The redo date is the important field: the log is a queue, not a diary.</p></div></div>
+    </div>
+    <div id="error-log-sample"></div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Adjust anything</h2>
+    <form class="card card-border bg-base-200" data-lavish-question="dsa-notes"
+      onsubmit="event.preventDefault(); const v = this.querySelector('textarea').value.trim(); if (!v) return; queueAnswer(this, 'dsa-notes', 'DSA plan notes: ' + v, { tag: 'text', text: v });">
+      <div class="card-body">
+        <textarea class="textarea textarea-bordered w-full" rows="3" placeholder="e.g. your current LeetCode numbers, topics that feel worst, target companies, anything to change in this plan"></textarea>
+        <div class="card-actions items-center justify-between mt-1">
+          <button type="submit" class="btn btn-secondary btn-sm">Send notes</button>
+          <span data-status class="text-xs text-success"></span>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer class="card bg-base-200 card-border">
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">Next step</h2>
+      <p class="text-base-content/80 text-sm max-w-2xl">
+        Say "start" in chat (or annotate this page) and we begin with the baseline: 3 cold mediums to measure your
+        current pattern hit rate, then day 1 of the scan ritual. Minimum 1 hour, more when it flows.
+      </p>
+      <p class="text-xs text-base-content/50">Tip: highlight any text or click any element on this page to leave a note for me.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  function queueAnswer(form, question, message, opts) {
+    if (window.lavish && typeof window.lavish.queuePrompt === 'function') {
+      window.lavish.queuePrompt(message, Object.assign({ tag: 'choice', element: form, data: { question: question } }, opts || {}));
+    }
+    var s = form.querySelector('[data-status]');
+    if (s) s.textContent = 'Queued';
+  }
+</script>
+<script type="module">
+  import { File } from "https://esm.sh/@pierre/diffs@1.2.10?bundle";
+
+  const options = { theme: { light: "github-light", dark: "github-dark" }, themeType: "dark", overflow: "wrap" };
+
+  const errorLog = {
+    name: "dsa/error-log.md",
+    contents: [
+      "# Error log (sample entries)",
+      "",
+      "## 2026-10-08 - Longest Substring Without Repeating Characters",
+      "- scan: \"longest contiguous substring\", n = 5 * 10^4 -> sliding window",
+      "- pattern chosen: sliding window (correct, first try)",
+      "- mistake class: C - missed edge case (empty string)",
+      "- skeleton: window + last-index dict, move left past the duplicate",
+      "- redo: 2026-10-15",
+      "",
+      "## 2026-10-09 - Course Schedule II",
+      "- scan: \"ordering with prerequisites\" -> topological sort",
+      "- pattern chosen: DFS (wrong) - correct: Kahn's BFS",
+      "- mistake class: A - wrong pattern",
+      "- fix queued: 3 extra topological-sort problems this week",
+      "- redo: 2026-10-11",
+      ""
+    ].join("\n"),
+  };
+
+  new File(options).render({ containerWrapper: document.querySelector("#error-log-sample"), file: errorLog });
+</script>
+</body>
+</html>

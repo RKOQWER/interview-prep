@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLD Plan - TypeScript - 12 Weeks</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/daisyui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5.5.19/themes.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :where(.grid, .flex, .layout-grid, .layout-flex) > *,
+  :where([style*="display: grid"], [style*="display:grid"], [style*="display: flex"], [style*="display:flex"]) > * {
+    min-width: 0;
+  }
+  :where(p, h1, h2, h3, h4, h5, h6, li, dd, blockquote, figcaption, td, th, .badge, .label) {
+    overflow-wrap: anywhere;
+  }
+  :where(img, svg, video, canvas, iframe) {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body class="bg-base-100 text-base-content">
+<main class="mx-auto max-w-6xl p-6 lg:p-10 space-y-12">
+
+  <header class="hero bg-base-200 rounded-box">
+    <div class="hero-content text-center py-10 lg:py-14">
+      <div class="max-w-3xl space-y-5">
+        <span class="badge badge-primary badge-soft badge-lg">Track L - daily plan - TypeScript</span>
+        <h1 class="text-4xl lg:text-5xl font-bold">Low-Level Design, code-first</h1>
+        <p class="text-lg text-base-content/80">
+          You learn the small slice of TypeScript that carries LLD interviews, the OOP / SOLID / pattern vocabulary
+          interviewers score, one repeatable method for turning a problem statement into classes, then 14 classic
+          problems coded and tested end to end. TypeScript is the working language; Python is used only to compare
+          how a design reads in your everyday language. One of three separate plans. Minimum 1 hour per day.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats stats-vertical sm:stats-horizontal shadow bg-base-200 w-full">
+    <div class="stat"><div class="stat-title">Modules</div><div class="stat-value text-primary">8</div><div class="stat-desc">M0 to M7</div></div>
+    <div class="stat"><div class="stat-title">Problems coded</div><div class="stat-value text-primary">14</div><div class="stat-desc">with tests + twists</div></div>
+    <div class="stat"><div class="stat-title">Method</div><div class="stat-value text-primary">1</div><div class="stat-desc">statement to classes</div></div>
+    <div class="stat"><div class="stat-title">Daily</div><div class="stat-value text-primary">60+</div><div class="stat-desc">minutes, more when it flows</div></div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">How every session runs</h2>
+    <p class="text-base-content/70">Same loop every time. You write the majority of the code.</p>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">1</span><h3 class="font-semibold">Recall</h3><p class="text-sm text-base-content/70">5 min. Rebuild last session's pattern or class design from memory, no notes.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">2</span><h3 class="font-semibold">Concept</h3><p class="text-sm text-base-content/70">One idea, one reason it matters, one tiny example. Never a wall of theory.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">3</span><h3 class="font-semibold">Violation to fix</h3><p class="text-sm text-base-content/70">A bad code smell, then the fix. This is the format shown below.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">4</span><h3 class="font-semibold">Build</h3><p class="text-sm text-base-content/70">You code the exercise or problem in <code class="kbd kbd-sm">lld/</code>. I review, we fix, we discuss trade-offs.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-primary badge-sm">5</span><h3 class="font-semibold">Wrap</h3><p class="text-sm text-base-content/70">2 min. Tests green, one commit, one trade-off sentence for the log.</p></div></div>
+    </div>
+    <div role="alert" class="alert alert-success alert-soft">
+      <span class="text-sm"><strong>Mastery gate (your rule):</strong> if a concept feels even slightly shaky, we do not move on. I add more problems on that exact concept until you can explain it and code it cold.</span>
+    </div>
+    <p class="text-sm text-base-content/60">Sequence: M0-M3 in October, patterns and Tier 1-2 problems in November, Tier 3 and interview craft in December.</p>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The modules</h2>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M0</span>
+          <h3 class="card-title">The workbench</h3>
+          <span class="badge badge-ghost badge-sm">1 session</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>Scaffold inside <code class="kbd kbd-sm">lld/</code>: Node + TypeScript in strict mode + tsx to run files + vitest for tests</li>
+          <li>Conventions: one class per file, interfaces separated from implementations, tests next to code</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">You'll code:</span> the setup itself, then take a deliberately failing test and make it pass.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M1</span>
+          <h3 class="card-title">The TypeScript survival kit</h3>
+          <span class="badge badge-ghost badge-sm">7 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>Types, inference, function signatures, unions, literal types, recording behavior with types</li>
+          <li>Null safety: strict mode, optional chaining, nullish coalescing</li>
+          <li>Objects: interface vs type, optional and readonly properties, structural typing (the big mind-shift)</li>
+          <li>Classes deep dive: constructors, parameter properties, access modifiers, getters/setters, static, abstract vs interface</li>
+          <li>Generics, just enough: containers like <code class="kbd kbd-sm">Repository&lt;T&gt;</code>, constraints, and when NOT to genericize</li>
+          <li>Modules and file layout: imports, circular imports, enums vs literal unions</li>
+          <li>Errors: custom error classes, fail-fast design</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">You'll code:</span> a typed Task Manager mini-app, 10-12 small files, no design patterns yet. Every concept gets its Python analogue first, then the differences.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M2</span>
+          <h3 class="card-title">OOP that gets scored</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>Encapsulation means invariants, not getter/setter boilerplate</li>
+          <li>Abstraction: callers depend on the interface, not the implementation</li>
+          <li>Inheritance vs composition: the is-a / has-a test, and why composition is the default</li>
+          <li>Polymorphism: killing if/else chains on object type</li>
+          <li>Abstract class vs interface decision rule: shared state goes to an abstract class, everything else to an interface</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">Drills:</span> refactor a procedural script into objects; replace a type-switch with polymorphism.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M3</span>
+          <h3 class="card-title">SOLID in code</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>One principle at a time, always as violation - fix - your drill</li>
+          <li><strong>S</strong>: split classes by change driver, not by size</li>
+          <li><strong>O</strong>: add a new payment type without editing existing code</li>
+          <li><strong>L</strong>: repair a broken hierarchy (the Square/Rectangle trap)</li>
+          <li><strong>I</strong>: split fat interfaces (the throws-UnsupportedOperation test)</li>
+          <li><strong>D</strong>: inject interfaces instead of constructing dependencies, and why that makes tests trivial</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">Proof mechanic:</span> every fix must make a failing test pass and keep every other test green.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M4</span>
+          <h3 class="card-title">Pattern toolbox</h3>
+          <span class="badge badge-ghost badge-sm">5 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li><strong>Creational:</strong> Factory Method, Builder, Singleton vs registry (and why dependency injection usually beats Singleton)</li>
+          <li><strong>Behavioral:</strong> Strategy, State, Observer, Command, Template Method, Chain of Responsibility</li>
+          <li><strong>Structural:</strong> Adapter, Decorator, Facade, Proxy, Composite</li>
+          <li>Each pattern: the <em>signal in a requirement</em> that should trigger it, the skeleton, one mini build</li>
+          <li>Confusion pairs interviewers love: Strategy vs State, Decorator vs Proxy, Adapter vs Facade</li>
+          <li>Anti-pattern radar: God class, premature abstraction, pattern soup</li>
+        </ul>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">You'll code:</span> a small build per pattern, then the same pattern applied inside a real problem.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M5</span>
+          <h3 class="card-title">The method: problem statement to classes</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <p class="text-sm text-base-content/80">Your stated weak spot, so it gets its own framework. The 8 steps:</p>
+        <ol class="list-decimal list-inside text-sm space-y-1 text-base-content/80">
+          <li>Clarify: functional requirements, constraints, what is out of scope</li>
+          <li>Underline nouns - candidate entities</li>
+          <li>Underline verbs - behaviors and responsibilities</li>
+          <li>Write invariants: what must always be true per entity</li>
+          <li>Find variation points - interfaces go here, and only here</li>
+          <li>Map relationships: has-a, is-a, uses-a</li>
+          <li>Trace 2-3 workflows end to end, happy path then edge cases</li>
+          <li>Name the public API before writing any implementation</li>
+        </ol>
+        <p class="text-sm mt-1"><span class="text-primary font-semibold">Format:</span> I model 2 problems end to end, thinking aloud. Then you co-drive one: you sketch, I review, we refine. Every design ends as interfaces + class shells, then code.</p>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M6</span>
+          <h3 class="card-title">Problem lab - the core of the track</h3>
+          <span class="badge badge-ghost badge-sm">9-10 sessions</span>
+        </div>
+        <p class="text-sm text-base-content/80">
+          Each problem runs the same loop: interviewer-style prompt - you clarify - you sketch the skeleton -
+          we code it - tests - then the twist ("now add X"). Patterns are never the goal, they are the outcome.
+        </p>
+        <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+          <table class="table table-zebra">
+            <thead>
+              <tr><th>Tier</th><th>Problems</th><th>Patterns they pull in</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-success badge-soft badge-sm">Tier 1</span><div class="text-xs text-base-content/60 mt-1">foundations</div></td>
+                <td class="text-sm">Parking Lot, Vending Machine, Library Management, Logger, Tic-Tac-Toe</td>
+                <td class="text-sm">Strategy, State, Factory, Singleton vs registry, Observer</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-warning badge-soft badge-sm">Tier 2</span><div class="text-xs text-base-content/60 mt-1">richer rules</div></td>
+                <td class="text-sm">Splitwise, Elevator System, ATM, LRU Cache, Rate Limiter</td>
+                <td class="text-sm">State, Strategy, Chain of Responsibility, generics, data-structure reasoning</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-error badge-soft badge-sm">Tier 3</span><div class="text-xs text-base-content/60 mt-1">service style</div></td>
+                <td class="text-sm">Pub/Sub Notification Service, BookMyShow, Food Delivery, Chess</td>
+                <td class="text-sm">Observer, Command, Facade, order State machines, locking invariants</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-border bg-base-200">
+      <div class="card-body">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="badge badge-primary badge-lg font-mono">M7</span>
+          <h3 class="card-title">Interview craft + full mocks</h3>
+          <span class="badge badge-ghost badge-sm">2 sessions</span>
+        </div>
+        <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+          <li>The 45-minute playbook: clarify 5, design 10, code 25, wrap 5</li>
+          <li>Trade-off sentences: "I chose X over Y because of this requirement. The cost is C, acceptable because D."</li>
+          <li>Talking while coding, naming things, handling the mid-interview twist without panicking</li>
+          <li>Full mock interviews where I play the interviewer and score you against the rubric</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The curated TypeScript subset</h2>
+    <p class="text-base-content/70">
+      You said you do not want to learn all the functions. Agreed. This is the whole list we drill, always inside a
+      real problem. Where a function mirrors a Python structure you already know (dict, set, list operations), we
+      call out the equivalence so it sticks faster.
+    </p>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead>
+          <tr><th>Category</th><th>The functions we drill</th><th>Why they carry your code</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold text-sm">Arrays</td>
+            <td class="text-sm"><code class="kbd kbd-sm">map</code> <code class="kbd kbd-sm">filter</code> <code class="kbd kbd-sm">reduce</code> <code class="kbd kbd-sm">find</code> <code class="kbd kbd-sm">findIndex</code> <code class="kbd kbd-sm">some</code> <code class="kbd kbd-sm">every</code> <code class="kbd kbd-sm">flatMap</code> <code class="kbd kbd-sm">includes</code> <code class="kbd kbd-sm">sort</code> <code class="kbd kbd-sm">slice</code> <code class="kbd kbd-sm">spread</code></td>
+            <td class="text-sm">Turn collections inside out without mutable index loops. Also: the <code class="kbd kbd-sm">sort</code> mutation trap.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Map and Set</td>
+            <td class="text-sm"><code class="kbd kbd-sm">Map</code> for registries and caches, <code class="kbd kbd-sm">Set</code> for uniqueness and dedup, <code class="kbd kbd-sm">get/set/has/delete/values</code></td>
+            <td class="text-sm">The two data structures behind half of all LLD solutions. Prefer Map over plain objects for lookups.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Objects</td>
+            <td class="text-sm"><code class="kbd kbd-sm">Object.keys</code> <code class="kbd kbd-sm">Object.values</code> <code class="kbd kbd-sm">Object.entries</code> <code class="kbd kbd-sm">Object.fromEntries</code> <code class="kbd kbd-sm">spread</code> <code class="kbd kbd-sm">Object.freeze</code></td>
+            <td class="text-sm">Configs, registries, safe copies, protecting invariants.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Strings</td>
+            <td class="text-sm"><code class="kbd kbd-sm">split</code> <code class="kbd kbd-sm">join</code> <code class="kbd kbd-sm">includes</code> <code class="kbd kbd-sm">startsWith</code> <code class="kbd kbd-sm">endsWith</code> <code class="kbd kbd-sm">replace</code> <code class="kbd kbd-sm">replaceAll</code> <code class="kbd kbd-sm">padStart</code> + template literals</td>
+            <td class="text-sm">Parsing commands, formatting receipts and log lines.</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-sm">Control flow</td>
+            <td class="text-sm"><code class="kbd kbd-sm">for...of</code>, iteration order, when <code class="kbd kbd-sm">forEach</code> is wrong, when <code class="kbd kbd-sm">map</code> is wrong</td>
+            <td class="text-sm">Straight-line readable code instead of index bookkeeping.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-base-content/60">Everything else (regex deep-dives, currying, exotic array methods) is added only if a real problem demands it.</p>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">A taste of the teaching style</h2>
+    <p class="text-base-content/70">Every lesson is a smell, then a fix. Here is the exact move you will learn in M3 and reuse in the Parking Lot problem.</p>
+    <p class="text-sm text-primary font-semibold">Before: if/else on type - a hidden open/closed violation. Every new vehicle type edits this class.</p>
+    <div id="code-before"></div>
+    <p class="text-sm text-success font-semibold mt-4">After: one interface, one class per rate. New type = new class, zero edits here.</p>
+    <div id="code-after"></div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">The real-world thread</h2>
+    <div class="grid gap-4 lg:grid-cols-3">
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Production note per session</h3><p class="text-sm text-base-content/70">Two minutes at the end: where this pattern lives in production code. Strategy in a pricing service, State in order workflows, Observer in event systems.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Weekly application task</h3><p class="text-sm text-base-content/70">Once a week, apply or refactor one thing in your real work repo. Five lines in <code class="kbd kbd-sm">lld/notes.md</code>: what changed, why it is better, the trade-off.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><h3 class="font-semibold">Trade-off log</h3><p class="text-sm text-base-content/70">Every design decision gets one sentence: chose X over Y because of requirement Z; the cost is C, acceptable because D. Same sentence shape as interviews and PR discussions.</p></div></div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Adjust anything</h2>
+    <form class="card card-border bg-base-200" data-lavish-question="lld-notes"
+      onsubmit="event.preventDefault(); const v = this.querySelector('textarea').value.trim(); if (!v) return; queueAnswer(this, 'lld-notes', 'LLD plan notes: ' + v, { tag: 'text', text: v });">
+      <div class="card-body">
+        <textarea class="textarea textarea-bordered w-full" rows="3" placeholder="e.g. patterns you dread, problems to add or skip, anything to change in this plan"></textarea>
+        <div class="card-actions items-center justify-between mt-1">
+          <button type="submit" class="btn btn-primary btn-sm">Send notes</button>
+          <span data-status class="text-xs text-success"></span>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer class="card bg-base-200 card-border">
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">Next step</h2>
+      <p class="text-base-content/80 text-sm max-w-2xl">
+        Say "start" in chat (or annotate this page) and we begin with M0: the <code class="kbd kbd-sm">lld/</code>
+        scaffold, then a failing test you make pass. Minimum 1 hour, more when it flows.
+      </p>
+      <p class="text-xs text-base-content/50">Tip: highlight any text or click any element on this page to leave a note for me.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  function queueAnswer(form, question, message, opts) {
+    if (window.lavish && typeof window.lavish.queuePrompt === 'function') {
+      window.lavish.queuePrompt(message, Object.assign({ tag: 'choice', element: form, data: { question: question } }, opts || {}));
+    }
+    var s = form.querySelector('[data-status]');
+    if (s) s.textContent = 'Queued';
+  }
+</script>
+<script type="module">
+  import { File, FileDiff } from "https://esm.sh/@pierre/diffs@1.2.10?bundle";
+
+  const options = { theme: { light: "github-light", dark: "github-dark" }, themeType: "dark", overflow: "wrap", diffStyle: "split" };
+
+  const before = {
+    name: "fee-calculator.ts",
+    contents: [
+      "class FeeCalculator {",
+      "  calculate(type: string, hours: number): number {",
+      "    if (type === 'car') return hours * 20;",
+      "    if (type === 'bike') return hours * 10;",
+      "    if (type === 'truck') return hours * 40;",
+      "    throw new Error('Unknown vehicle type');",
+      "  }",
+      "}",
+      ""
+    ].join("\n"),
+  };
+  const after = {
+    name: "fee-calculator.ts",
+    contents: [
+      "interface FeeStrategy {",
+      "  calculate(hours: number): number;",
+      "}",
+      "",
+      "class FeeCalculator {",
+      "  private strategies = new Map<string, FeeStrategy>();",
+      "",
+      "  register(type: string, strategy: FeeStrategy): void {",
+      "    this.strategies.set(type, strategy);",
+      "  }",
+      "",
+      "  calculate(type: string, hours: number): number {",
+      "    const strategy = this.strategies.get(type);",
+      "    if (!strategy) throw new Error('Unknown vehicle type');",
+      "    return strategy.calculate(hours);",
+      "  }",
+      "}",
+      ""
+    ].join("\n"),
+  };
+
+  new File(options).render({ containerWrapper: document.querySelector("#code-before"), file: before });
+  new FileDiff({ ...options, diffStyle: "unified" }).render({ containerWrapper: document.querySelector("#code-after"), oldFile: before, newFile: after });
+</script>
+</body>
+</html>
