@@ -31,26 +31,29 @@
         <span class="badge badge-accent badge-soft badge-lg">Track H - daily plan - diagram-first</span>
         <h1 class="text-4xl lg:text-5xl font-bold">High-Level Design, one system per week</h1>
         <p class="text-lg text-base-content/80">
-          October builds the vocabulary: scaling, estimation, caching, storage, queues. From there, one classic
-          system per week, each getting the same 7-part treatment: requirements, estimation, API, data model,
-          diagram, deep dives, trade-offs. One of three separate plans. Minimum 1 hour per day.
+          October builds the vocabulary: scaling, estimation, caching, storage, queues. Then 12 classic systems,
+          each getting the same 7-part treatment. Three parallel threads sharpen the edge: AI systems (RAG,
+          agents, LLM serving), under-the-hood studies of real infrastructure (Postgres, CouchDB, CDNs, load
+          balancers), and the math corner (queuing, quorums, probabilistic structures). One of three separate
+          plans. Minimum 1 hour per day.
         </p>
       </div>
     </div>
   </header>
 
   <section class="stats stats-vertical sm:stats-horizontal shadow bg-base-200 w-full">
-    <div class="stat"><div class="stat-title">Systems</div><div class="stat-value text-accent">12</div><div class="stat-desc">designed end to end</div></div>
-    <div class="stat"><div class="stat-title">Treatment</div><div class="stat-value text-accent">7 parts</div><div class="stat-desc">same shape every time</div></div>
+    <div class="stat"><div class="stat-title">Classic systems</div><div class="stat-value text-accent">12</div><div class="stat-desc">7-part treatment each</div></div>
+    <div class="stat"><div class="stat-title">AI systems</div><div class="stat-value text-accent">4</div><div class="stat-desc">RAG, agents, serving, memory</div></div>
+    <div class="stat"><div class="stat-title">Under the hood</div><div class="stat-value text-accent">6</div><div class="stat-desc">real systems, deep internals</div></div>
+    <div class="stat"><div class="stat-title">Math corners</div><div class="stat-value text-accent">12</div><div class="stat-desc">one per week</div></div>
     <div class="stat"><div class="stat-title">Mocks</div><div class="stat-value text-accent">3</div><div class="stat-desc">Nov + Dec</div></div>
-    <div class="stat"><div class="stat-title">Daily</div><div class="stat-value text-accent">60+</div><div class="stat-desc">minutes, more when it flows</div></div>
   </section>
 
   <section class="space-y-4">
     <h2 class="text-2xl font-bold">How every session runs</h2>
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">5-10 min</span><h3 class="font-semibold">Recall</h3><p class="text-sm text-base-content/70">Rebuild yesterday's diagram of the current system from memory. Paper first, then compare against your notes.</p></div></div>
-      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">10 min</span><h3 class="font-semibold">Fundamental</h3><p class="text-sm text-base-content/70">One building block: what problem it solves, when it is the wrong tool, five bullets in <code class="kbd kbd-sm">hld/notes.md</code>.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">10 min</span><h3 class="font-semibold">Fundamental</h3><p class="text-sm text-base-content/70">One building block (classic or AI) plus the week's math corner, always answering: what problem it solves, when it is the wrong tool. Five bullets in <code class="kbd kbd-sm">hld/notes.md</code>.</p></div></div>
       <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">35-45 min</span><h3 class="font-semibold">Design work</h3><p class="text-sm text-base-content/70">One section of the 7-part treatment for the current system. Days 1-6: one section each. Day 7: redraw everything from memory.</p></div></div>
       <div class="card card-border bg-base-200"><div class="card-body p-4"><span class="badge badge-accent badge-sm">5 min</span><h3 class="font-semibold">Wrap</h3><p class="text-sm text-base-content/70">Update <code class="kbd kbd-sm">hld/progress.md</code>, write one trade-off sentence in the log.</p></div></div>
     </div>
@@ -146,7 +149,23 @@
   </section>
 
   <section class="space-y-4">
-    <h2 class="text-2xl font-bold">The 12 weeks</h2>
+    <h2 class="text-2xl font-bold">Weekly rhythm (three threads)</h2>
+    <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+      <table class="table table-zebra">
+        <thead><tr><th>When</th><th>What</th></tr></thead>
+        <tbody>
+          <tr><td class="text-sm font-semibold">Mon-Thu</td><td class="text-sm">Thread 1: the current classic system, one section of the 7-part treatment per day.</td></tr>
+          <tr><td class="text-sm font-semibold">Friday</td><td class="text-sm">Thread 2: AI systems design work (see below).</td></tr>
+          <tr><td class="text-sm font-semibold">Saturday</td><td class="text-sm">Thread 3: under-the-hood study (even weeks) plus redraw the current system from memory (every week).</td></tr>
+          <tr><td class="text-sm font-semibold">Every day, 10 min</td><td class="text-sm">Math corner: the week's topic, tied to the systems you are drawing that week.</td></tr>
+          <tr><td class="text-sm font-semibold">Sunday</td><td class="text-sm">Catch-up, or the scheduled mock in November and December.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Thread 1 - the 12 classic systems</h2>
     <div class="grid gap-4 lg:grid-cols-3">
       <div class="card card-border bg-base-200">
         <div class="card-body">
@@ -189,6 +208,64 @@
           </ul>
           <p class="text-sm text-base-content/70">Systems 7-12, plus scaling deep dives and multi-region trade-offs on the earlier designs.</p>
           <p class="text-xs text-base-content/60">Checkpoint: all 12 done, HLD mocks 2 and 3, deep-dive redraws from memory</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Thread 2 - AI systems (agentic and RAG)</h2>
+    <p class="text-base-content/70">
+      Trending in interviews and in everyday work. Same 7-part treatment, with AI-specific deep dives: quality
+      evals, cost per token, time-to-first-token, and the failure modes unique to probabilistic systems. Fridays.
+    </p>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="card card-border bg-base-200"><div class="card-body"><span class="badge badge-accent badge-sm">Design 1</span><h3 class="font-semibold">RAG knowledge assistant</h3><p class="text-sm text-base-content/70">Ingestion and chunking, embeddings, vector store, hybrid search, re-ranking, citations, evals. Deep dives: recall versus latency, freshness, cost.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><span class="badge badge-accent badge-sm">Design 2</span><h3 class="font-semibold">Agentic workflow engine</h3><p class="text-sm text-base-content/70">Tool calling, planning loops, state and memory, retries, human-in-the-loop, sandboxing, budget limits. Deep dives: determinism, tool idempotency, blast radius.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><span class="badge badge-accent badge-sm">Design 3</span><h3 class="font-semibold">LLM inference serving</h3><p class="text-sm text-base-content/70">Continuous batching, KV cache, quantization, GPU pools, autoscaling, token streaming. Deep dives: throughput versus latency, tail latencies, cost per million tokens.</p></div></div>
+      <div class="card card-border bg-base-200"><div class="card-body"><span class="badge badge-accent badge-sm">Design 4</span><h3 class="font-semibold">Assistant with memory</h3><p class="text-sm text-base-content/70">Session memory, long-term vector memory, personalization, guardrails, privacy. Deep dives: memory relevance, poisoning, deletion semantics.</p></div></div>
+    </div>
+    <p class="text-sm text-base-content/60">Fundamentals covered along the way: embeddings and vector search (ANN, HNSW), chunking strategies, evaluation harnesses, prompt and semantic caching, streaming protocols, cost control.</p>
+  </section>
+
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold">Thread 3 - under the hood + the math corner</h2>
+    <p class="text-base-content/70">
+      The differentiator you asked for: knowing how the elegant systems you rely on actually work, and the math
+      that explains why designs hold at scale. This is the part that changes how you think, not just what you know.
+    </p>
+    <div class="grid gap-4 lg:grid-cols-2">
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title text-base">Under the hood: one real system every 2 weeks</h3>
+          <ul class="list-disc list-inside text-sm space-y-1 text-base-content/80">
+            <li><strong>Postgres:</strong> MVCC, WAL, heap storage, B-tree indexes, the query planner</li>
+            <li><strong>CouchDB:</strong> document model, append-only B-trees, the replication protocol</li>
+            <li><strong>Redis:</strong> event loop, data structures, persistence modes, cluster topology</li>
+            <li><strong>Kafka:</strong> log segments, partitions, consumer groups, exactly-once semantics</li>
+            <li><strong>CDN edge (Cloudflare-style):</strong> anycast, edge caching, request routing, cache keys</li>
+            <li><strong>Load balancers (L4 vs L7):</strong> connection handling, algorithms, health checks, draining</li>
+          </ul>
+          <p class="text-sm text-base-content/70">Format: a study day, then a one-page write-up with an internals diagram in <code class="kbd kbd-sm">hld/</code>, then explain it from memory next session.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title text-base">Math corner: one topic per week</h3>
+          <ol class="list-decimal list-inside text-sm space-y-1 text-base-content/80">
+            <li>Little's Law and utilization</li>
+            <li>Percentiles and tail latency</li>
+            <li>Capacity estimation models</li>
+            <li>Quorum math (R + W &gt; N), Raft basics</li>
+            <li>Consistent hashing math and virtual nodes</li>
+            <li>Probabilistic structures: Bloom, count-min, HyperLogLog error bounds</li>
+            <li>Caching math: hit rate, working set, LRU vs LFU</li>
+            <li>Power of two choices in load balancing</li>
+            <li>Rate limiting math: token bucket, leaky bucket</li>
+            <li>Queueing networks and backpressure (M/M/1 basics)</li>
+            <li>CAP and PACELC formalized</li>
+            <li>Vector search math: ANN trade-offs (recall vs latency vs memory)</li>
+          </ol>
         </div>
       </div>
     </div>
