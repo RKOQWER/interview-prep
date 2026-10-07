@@ -16,4 +16,14 @@ describe("Task",()=>{
         const t1:Task={id:2,title:"Task 2",status:"done"};
         expect(assigneeName(t1)).toBe("unassigned");
     })
+    it("Task id cannot be changed",()=>{
+        const t1:Task={id:1,title:"Invariant1",status:"done"};
+        // @ts-expect-error id is readonly
+        t1.id=10;
+    })
+    it("Task name cannot be changed",()=>{
+        const t1:Task={id:2,title:"Abc",status:"todo"};
+        //@ts-expect-error 
+        t1.name="Hello";
+    })
 })
