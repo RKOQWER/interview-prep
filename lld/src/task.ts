@@ -10,6 +10,7 @@ export interface Task {
 
 export function moveTask(t:Task,status:Status){
     const t2={...t,status:status};
+    console.log(JSON.stringify(t2.status));
     return t2;
 }
 
