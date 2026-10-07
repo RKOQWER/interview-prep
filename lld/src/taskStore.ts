@@ -1,6 +1,7 @@
 // Followung the rule one class per file
 import { Task } from "./task";
 import { Repository } from "./repository";
+import { NotFoundError,InvalidStateError } from "./errors";
 export class TaskStore{
     private readonly owner:string;
     private repo=new Repository<Task>();
@@ -10,10 +11,19 @@ export class TaskStore{
         this.owner=owner;
     }
     public add(task:Task):void{
+        if(task.id <=0)
+            throw new InvalidStateError("id cannot be negative");
+        if(task.title.trim()==="")
+            throw new InvalidStateError("Title cannot be empty");
         this.repo.add(task.id,task);
     }
     public findById(id:number):Task|undefined{
-        return this.repo.findById(id);
+        
+        const task= this.repo.findById(id);
+        if (task===undefined){
+            throw new NotFoundError("task",id);
+        }
+        return task;
     }
     public getSize():number{
         return this.repo.getSize()
