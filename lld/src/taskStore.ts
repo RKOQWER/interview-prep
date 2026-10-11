@@ -1,5 +1,5 @@
 // Followung the rule one class per file
-import { Task } from "./task";
+import { Status, Task } from "./task";
 import { Repository } from "./repository";
 import { NotFoundError,InvalidStateError } from "./errors";
 export class TaskStore{
@@ -11,11 +11,11 @@ export class TaskStore{
         this.owner=owner;
     }
     public add(task:Task):void{
-        if(task.id <=0)
+        if(task.getId() <=0)
             throw new InvalidStateError("id cannot be negative");
-        if(task.title.trim()==="")
+        if(task.getTitle().trim()==="")
             throw new InvalidStateError("Title cannot be empty");
-        this.repo.add(task.id,task);
+        this.repo.add(task.getId(),task);
     }
     public findById(id:number):Task|undefined{
         
@@ -31,6 +31,18 @@ export class TaskStore{
     // For this small usecase it may look like over engineering but in real world instantiating taskstore will not be that simple. So  there this static method makes sense
     public static empty():TaskStore{
         return new TaskStore("Annonymous");
+    }
+
+    public setStatus(id:number,newStatus:Status):boolean{
+        const allTasks=this.repo.list();
+        for(let i=0;i<allTasks.length;i++){
+            const t=allTasks[i] as Task;
+            if(t.getId()==id){
+                t.setStatus(newStatus);
+                return true;
+            }
+        }
+        return false;
     }
 
 }

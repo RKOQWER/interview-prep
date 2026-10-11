@@ -1,29 +1,36 @@
-import {describe,it,expect} from "vitest";
-import { Task,moveTask,assigneeName } from "../src/task";
+import {describe, expect, it} from "vitest";
+import { Task } from "../src/task";
 describe("Task",()=>{
-    it("Move a task without mutating orignal",()=>{
-        const t1:Task= {id:1, title:"Task 1", status: "todo"}
-        const t2=moveTask(t1,"done");
-        expect(t2.status).toBe("done");
-        expect(t1.status).toBe("todo");
+    it("test getid",()=>{
+        const t:Task=new Task(1,"One","todo");
+        expect(t.getId()).toBe(1);
     })
-    it("Assigning a assignee name",()=>{
-        const t1:Task={id:1,title:"Task1",status:"todo",assignee:{name:"Rahul"}};
-        expect(assigneeName(t1)).toBe("Rahul");
 
+    it("test get title",()=>{
+        const t:Task=new Task(1,"One","todo");
+        expect(t.getTitle()).toBe("One");
     })
-    it("Task with no assignee",()=>{
-        const t1:Task={id:2,title:"Task 2",status:"done"};
-        expect(assigneeName(t1)).toBe("unassigned");
+    it("test get status",()=>{
+        const t:Task=new Task(1,"One","todo");
+        expect(t.getStatus()).toBe("todo");
     })
-    it("Task id cannot be changed",()=>{
-        const t1:Task={id:1,title:"Invariant1",status:"done"};
-        // @ts-expect-error id is readonly
-        t1.id=10;
+
+    it("test set status",()=>{
+        const t:Task=new Task(1,"One","todo");
+        t.setStatus("in_progress");
+        expect(t.getStatus()).toBe("in_progress");
     })
-    it("Task name cannot be changed",()=>{
-        const t1:Task={id:2,title:"Abc",status:"todo"};
-        //@ts-expect-error 
-        t1.name="Hello";
+
+    it("Cannot change id",()=>{
+        const t:Task= new Task(1,"one","todo");
+
+        // @ts-expect-error - no public id field or setter
+        t.id=2;
+    })
+    it("Cannot change title",()=>{
+        const t:Task= new Task(1,"one","todo");
+
+        // @ts-expect-error - no public title field or setter
+        t.title="two";
     })
 })

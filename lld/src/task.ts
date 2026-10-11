@@ -1,23 +1,30 @@
 export type Status="todo" | "in_progress" | "done";
 
-export interface Task {
-    readonly id: number;
-    readonly title: string;
-    status: Status;
-    assignee?: {name:string};
-    dueDate?:string;
+export class Task{
+    #id:number;
+    #title:string;
+    #status:Status;
+    public assignee?:{name:string};
+    public dueDate?:string;
+    constructor(id:number,title:string,status:Status){
+        this.#id=id;
+        this.#title=title;
+        this.#status=status;
+    }
+    public getId():number{
+        return this.#id;
+    }
+
+    public getTitle():string{
+        return this.#title;
+    }
+
+    public getStatus():Status{
+        return this.#status;
+    }
+
+    public setStatus(newStatus:Status):void{
+        this.#status=newStatus;
+    }
 }
 
-export function moveTask(t:Task,status:Status){
-    const t2={...t,status:status};
-    console.log(JSON.stringify(t2.status));
-    return t2;
-}
-
-export function assigneeName(t:Task):string{
-    return t.assignee?.name ?? "unassigned";
-}
-
-const t1:{id:number,title:string,status:Status,extra:number}={id:1,title:"Rahul",status:"todo",extra:1};
-
-const t2:Task=t1;
